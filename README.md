@@ -5,7 +5,8 @@ mirakc からストリームが来ないので、何か設定を見落として�
 また、B-CASカードリーダーに関しては試していないので注意。  
 (多分、podman machine の設定ファイルに、USBデバイスを追加した上で、色々やる必要がある)  
 下記を参照して、b_cas_proxy とか使った方が楽だと思う。  
-http://mun2.s308.xrea.com/soft01m.html
+http://mun2.s308.xrea.com/soft01m.html  
+(これ、b_cas_card.c を共有して良いのか分からない……)
 ## 簡単な説明
 Containerfile のあるディレクトリで
 ```
