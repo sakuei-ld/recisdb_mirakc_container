@@ -6,7 +6,7 @@ mirakc からストリームが来ないので、何か設定を見落として�
 (多分、podman machine の設定ファイルに、USBデバイスを追加した上で、色々やる必要がある)  
 下記を参照して、b_cas_proxy とか使った方が楽だと思う。  
 http://mun2.s308.xrea.com/soft01m.html  
-(上記の記事では、ライセンス関連が怪しいと記載されているが、大元の https://github.com/stz2012/libarib25 は Apacheライセンスなので、問題ない？)
+(https://github.com/stz2012/libarib25 より前が存在し、大元のライセンスは不明)
 ## 簡単な説明
 Containerfile のあるディレクトリで
 ```
