@@ -14,9 +14,10 @@ podman build -t mirakc .
 ```
 その後、下記のように実行すれば、mirakc のサーバーが立つ。
 ```
-podman run --name mirakc -p 40772:40772 -v /mnt/etc/mirakc:/etc/mirakc -v /mnt/lib/mirakc:/var/lib/mirakc -v /dev:/dev --rm -detach localhost/mirakc
+podman run --name mirakc -p 40772:40772 -v /mnt/etc/mirakc:/etc/mirakc -v /mnt/lib/mirakc:/var/lib/mirakc -v /dev:/dev --tz=Asia/Tokyo --rm -detach localhost/mirakc
 ```
--v /mnt/etc〜 とか、-v /mnt/lib〜 のところは、各々、よしなにしてください。
+-v /mnt/etc〜 とか、-v /mnt/lib〜 のところは、各々、よしなにしてください。  
+あと、--tzがないと、UTCになるので、何か問題が出るかも？
 ## 注意点
 - mirakc の build に、結構メモリが必要なようで、8GB は割り当てた方が良い。(4GBじゃ足らない可能性がある)
 - podman machine init で、--volume=[任意のディレクトリ]:/mnt みたいにしておいて、任意のディレクトリに etc/mirakc と lib/mirakc を作れば、上のコマンドで動くはず。
