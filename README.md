@@ -13,7 +13,7 @@ podman run --name mirakc -p 40772:40772 -v /mnt/etc/mirakc:/etc/mirakc -v /mnt/l
 - mirakc の build に、結構メモリが必要なようで、8GB は割り当てた方が良い。(4GBじゃ足らない可能性がある)
 - マウント関連は、podman machine 上のディレクトリに対してのマウントであることに注意。
 - /etc/mirakc の下に config.yml と strings.yml を置くこと。(記載する内容は、mirakcを参照)
-- tzが無い場合、どういう不具合が出るか分からないので注意
+- tzオプションをつけなかった場合、どういう不具合が出るか分からないので注意
 
 ## マウント関連 
 podman machine init で、--volume=[任意のディレクトリ]:/mnt みたいにしておいて、左記の[任意のディレクトリ]に etc/mirakc と lib/mirakc を作れば、上のコマンドで動くはず。
