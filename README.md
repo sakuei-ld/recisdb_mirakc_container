@@ -17,6 +17,9 @@ podman run --name mirakc -p 40772:40772 -v /mnt/etc/mirakc:/etc/mirakc -v /mnt/l
 
 ## マウント関連 
 podman machine init で、--volume=[任意のディレクトリ]:/mnt みたいにしておいて、左記の[任意のディレクトリ]に etc/mirakc と lib/mirakc を作れば、上のコマンドで動くはず。
+```
+
+```
 
 ## B-CASカードリーダーに関して
 未確認のため、特に対応はできません。  
@@ -36,4 +39,5 @@ https://web.chaperone.jp/w/index.php?pt2/BonCasLink
 ## その他
 b_cas_card.c の改造版は、ライセンス関係が怪しいので、今のところは置いておきません。  
 (特に問題ない、というのが明確に分かれば、追加します)  
-あと、mirakc の初回動作は、少し時間が掛かるかも。
+あと、mirakc の初回動作は、少し時間が掛かるかも。  
+ライセンスはよく分からんので、MITライセンスにしています。(責任は取りませんが、自由に使ってください)
