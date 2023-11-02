@@ -46,6 +46,7 @@ RUN cmake -S . -B build -G Ninja -D CMAKE_BUILD_TYPE=Release
 RUN ninja -C build vendor
 RUN ninja -C build
 RUN build/bin/mirakc-arib -h
+RUN cp build/bin/mirakc-arib /usr/local/bin/
 
 # 作業先を移動
 WORKDIR /root/temp
