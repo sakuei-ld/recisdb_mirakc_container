@@ -18,7 +18,12 @@ podman run --name mirakc -p 40772:40772 -v /mnt/etc/mirakc:/etc/mirakc -v /mnt/l
 ## マウント関連 
 podman machine init で、--volume=[任意のディレクトリ]:/mnt みたいにしておいて、左記の[任意のディレクトリ]に etc/mirakc と lib/mirakc を作れば、上のコマンドで動くはず。
 ```
-
+# 例
+podman machine init --disk-size=32 --cpus=2 --memory=4096 --volume=/Users/[username]/data/podman/mnt:/mnt
+mkdir -p /Users/[username]/data/podman/mnt/etc/mirakc # ここに mirakc の config 関連を置く
+mkdir -p /Users/[username]/data/podman/mnt/lib/mirakc
+mkdir /Users/[username]/data/podman/mnt/lib/mirakc/epg
+mkdir /Users/[username]/data/podman/mnt/lib/mirakc/logs # ここに mirakc の log が出力される
 ```
 
 ## B-CASカードリーダーに関して
